@@ -2,8 +2,6 @@
   color: #fff !important;
   font-weight: bold;
   font-size: large;
-  margin-right: 3rem !important;
-  margin-left: 3rem !important;
 }
 .Navbar {
   background-color: transparent;
@@ -13,9 +11,4 @@
 }
 .Navbar a:hover {
   border-bottom: 1px solid #fff !important;
-}
-@media (max-width: 575.98px) {
-}
-#backg {
-  background-color: black !important;
 }

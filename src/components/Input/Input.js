@@ -1,10 +1,4 @@
-import { useState } from "react";
-
 export default function Input(props) {
-  const [summonnerName, setSummonnerName] = useState("");
-  function onChangeHandler(e) {
-    setSummonnerName(e.target.value.trim());
-  }
   return (
     <div className={`${props.class}`}>
       <div>
@@ -14,8 +8,8 @@ export default function Input(props) {
             className="form-control"
             id={props.id}
             placeholder={props.placeholder}
-            value={summonnerName}
-            onChange={onChangeHandler}
+            value={props.value}
+            onChange={props.onChange}
           />
           <label htmlFor={props.id}>{props.Content}</label>
         </div>
