@@ -1,6 +1,7 @@
 import classes from "./Navi.module.css";
 import { Container, Navbar, Nav, Offcanvas } from "react-bootstrap";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Navi(props) {
   return (
@@ -25,17 +26,24 @@ export default function Navi(props) {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto">
-              <Nav.Link className={classes.Home} href="#home">
+              <Nav.Link className={classes.Home} as={NavLink} to="/">
                 Home
               </Nav.Link>
               <Nav.Link
                 className={`${classes.Agents} mx-lg-5`}
-                href="#features"
+                as={NavLink}
+                to="/agents"
               >
                 Agents
               </Nav.Link>
-              <Nav.Link className={classes.Maps} href="#pricing">
+              <Nav.Link className={classes.Maps} as={NavLink} to="/maps">
                 Maps
+              </Nav.Link>
+              <Nav.Link className={classes.Maps} as={NavLink} to="/player">
+                player(test only)
+              </Nav.Link>
+              <Nav.Link className={classes.Maps} as={NavLink} to="/404">
+                404(test only)
               </Nav.Link>
             </Nav>
             <Nav>

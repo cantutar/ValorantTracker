@@ -1,14 +1,23 @@
 /* eslint-disable no-unused-vars */
+import { Route, Routes } from "react-router-dom";
 import Navi from "./components/Navbar/Navi";
 import Agents from "./pages/Agents/Agents";
 import Homepage from "./pages/Homepage/Homepage";
+import NotFound from "./pages/NotFound/NotFound";
+import PlayerPage from "./pages/PlayerPage/PlayerPage";
+import Weapons from "./pages/Weapons/Weapons";
 
 function App() {
   return (
     <>
       <Navi />
-      <Homepage />
-      {/* <Agents /> */}
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/agents" element={<Agents />} />
+        <Route path="/weapons" element={<Weapons />} />
+        <Route path="/player" element={<PlayerPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </>
   );
 }

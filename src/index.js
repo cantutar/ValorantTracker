@@ -3,9 +3,23 @@ import ReactDOM from "react-dom/client";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import AgentContextProvider from "./store/agent-context";
+import WeaponContextProvider from "./store/weapon-context";
+import { BrowserRouter as Router } from "react-router-dom";
+import LeaderboardContextProvider from "./store/Leaderboard-context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(
+  <Router>
+    <LeaderboardContextProvider>
+      <AgentContextProvider>
+        <WeaponContextProvider>
+          <App />
+        </WeaponContextProvider>
+      </AgentContextProvider>
+    </LeaderboardContextProvider>
+  </Router>
+);
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

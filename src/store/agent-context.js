@@ -1,4 +1,4 @@
-import React, { useState, useContext, useCallback } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 
 const AgentsUrl = "https://valorant-api.com/v1/agents";
@@ -9,19 +9,15 @@ export function useAgentsInfo() {
   return useContext(agentContext);
 }
 export default function AgentContextProvider(props) {
-  const agentFetcher = useCallback(() => {
-    agentsInfoHandler();
-  }, []);
-
-  function agentsInfoHandler() {
+  useEffect(() => {
     axios
       .get(AgentsUrl)
       .then((res) => setAgents(res.data.data))
       .catch((err) => alert(err));
-  }
+  }, []);
 
   const [agents, setAgents] = useState([]);
-  const value = { agents, setAgents, agentFetcher };
+  const value = { agents, setAgents };
   return (
     <agentContext.Provider value={value}>
       {props.children}

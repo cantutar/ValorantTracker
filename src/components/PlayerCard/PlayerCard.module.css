@@ -1,0 +1,21 @@
+.overlay {
+  position: absolute;
+  z-index: 1;
+  max-width: 268px;
+}
+.image {
+  position: absolute;
+  z-index: 0;
+  width: 268px;
+}
+.nick {
+  position: absolute;
+  z-index: 2;
+  /* padding-top: 430px; */
+  padding-top: calc(41vh);
+}
+.title {
+  position: absolute;
+  z-index: 2;
+  padding-top: calc(44.5vh);
+}
