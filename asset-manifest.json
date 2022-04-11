@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ValorantTracker/static/css/main.381f4d60.css",
-    "main.js": "/ValorantTracker/static/js/main.fdee8935.js",
+    "main.js": "/ValorantTracker/static/js/main.f2df69f3.js",
     "static/js/27.5780d784.chunk.js": "/ValorantTracker/static/js/27.5780d784.chunk.js",
     "static/media/weapon.webm": "/ValorantTracker/static/media/weapon.35ae238ed7bc819eb9cf.webm",
     "static/media/FFA_Deathmatch_Poster.png": "/ValorantTracker/static/media/FFA_Deathmatch_Poster.0b43b853fa4a03beb640.png",
@@ -14,6 +14,6 @@
   },
   "entrypoints": [
     "static/css/main.381f4d60.css",
-    "static/js/main.fdee8935.js"
+    "static/js/main.f2df69f3.js"
   ]
 }
