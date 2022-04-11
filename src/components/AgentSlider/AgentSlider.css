@@ -57,9 +57,8 @@
     /* background-color: red; */
 
     grid-template-areas:
-      "card image ."
       ". image ."
-      ". image title";
+      " title image .";
   }
   .title {
     grid-area: title;
@@ -69,9 +68,14 @@
   }
   .image {
     grid-area: image;
+    transition: all 0.2s ease-in-out;
   }
   .skills {
     grid-area: skills;
+  }
+  .image:hover {
+    transform: scale(1.1);
+    cursor: pointer;
   }
 }
 .cont h1 {
@@ -124,4 +128,6 @@
   .card {
     margin-left: 5em;
   }
+}
+.swiper-button-next {
 }

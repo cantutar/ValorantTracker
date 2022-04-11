@@ -1,8 +1,8 @@
-import Background from "../../assets/videos/char.webm";
+import Background from "../../assets/videos/weapon.webm";
 import Slider from "../AgentSlider/AgentSlider";
-import classes from "./AgentsVideoBack.module.css";
+import classes from "./WeaponsVideoBack.module.css";
 
-export default function AgentsVideoBack(props) {
+export default function WeaponsVideoBack(props) {
   return (
     <>
       <div>

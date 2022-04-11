@@ -1,0 +1,71 @@
+/* Extra small devices (portrait phones, less than 576px) */
+/* @media (max-width: 575.98px) {
+  .Bg {
+    position: fixed;
+    z-index: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+} */
+
+/* Small devices (landscape phones, 576px and up) */
+/* @media (min-width: 576px) and (max-width: 767.98px) {
+  .Bg {
+    position: fixed;
+    z-index: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+} */
+
+/* Medium devices (tablets, 768px and up) */
+/* @media (min-width: 768px) and (max-width: 991.98px) {
+  .Bg {
+    position: fixed;
+    z-index: 0;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+} */
+
+/* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) and (max-width: 1199.98px) {
+  .Bg {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    margin-top: -65px;
+    background-repeat: no-repeat;
+  }
+} */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+.Bg {
+  position: fixed;
+  z-index: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* big screens */
+@media (min-aspect-ratio: 16/9) {
+  .Bg {
+    width: 100%;
+    height: auto;
+    margin-top: -65px;
+  }
+}
+/* phone */
+@media (max-aspect-ratio: 16/9) {
+  .Bg {
+    width: auto;
+    height: 100%;
+    margin-top: 0;
+  }
+}

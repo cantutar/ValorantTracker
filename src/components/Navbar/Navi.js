@@ -42,6 +42,9 @@ export default function Navi(props) {
               <Nav.Link className={classes.Maps} as={NavLink} to="/player">
                 player(test only)
               </Nav.Link>
+              <Nav.Link className={classes.Maps} as={NavLink} to="/weapons">
+                weapons(test only)
+              </Nav.Link>
               <Nav.Link className={classes.Maps} as={NavLink} to="/404">
                 404(test only)
               </Nav.Link>

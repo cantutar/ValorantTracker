@@ -6,6 +6,7 @@ import Agents from "./pages/Agents/Agents";
 import Homepage from "./pages/Homepage/Homepage";
 import NotFound from "./pages/NotFound/NotFound";
 import PlayerPage from "./pages/PlayerPage/PlayerPage";
+import WeaponPage from "./pages/Weapons/WeaponPage";
 import Weapons from "./pages/Weapons/Weapons";
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/agents" element={<Agents />} />
-        <Route path="/weapons" element={<Weapons />} />
+        {/* <Route path="/weapons" element={<Weapons />} /> */}
+        <Route path="/weapons" element={<WeaponPage />} />
         <Route path="/player" element={<PlayerPage />} />
         <Route path="/video" element={<AgentsVideoBack />} />
         <Route path="*" element={<NotFound />} />

@@ -76,7 +76,7 @@ export default function AgentsCopy(props) {
                         roleName={agent.role.displayName}
                         roleIcon={agent.role.displayIcon}
                       />
-                      <AgentsVideoBack></AgentsVideoBack>
+                      <AgentsVideoBack />
                     </React.Fragment>
                   )
                 );
