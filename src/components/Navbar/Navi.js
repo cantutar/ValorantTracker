@@ -45,6 +45,9 @@ export default function Navi(props) {
               <Nav.Link className={classes.Maps} as={NavLink} to="/404">
                 404(test only)
               </Nav.Link>
+              <Nav.Link className={classes.Maps} as={NavLink} to="/video">
+                PlayerVideo(test only)
+              </Nav.Link>
             </Nav>
             <Nav>
               <Nav.Link>

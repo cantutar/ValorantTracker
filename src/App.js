@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { Route, Routes } from "react-router-dom";
+import AgentsVideoBack from "./components/AgentsVideoBack/AgentsVideoBack";
 import Navi from "./components/Navbar/Navi";
 import Agents from "./pages/Agents/Agents";
 import Homepage from "./pages/Homepage/Homepage";
@@ -16,6 +17,7 @@ function App() {
         <Route path="/agents" element={<Agents />} />
         <Route path="/weapons" element={<Weapons />} />
         <Route path="/player" element={<PlayerPage />} />
+        <Route path="/video" element={<AgentsVideoBack />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
