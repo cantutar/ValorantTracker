@@ -1,20 +1,19 @@
 {
   "files": {
-    "main.css": "/ValorantTracker/static/css/main.378833d2.css",
-    "main.js": "/ValorantTracker/static/js/main.9f217752.js",
-    "static/js/787.36020927.chunk.js": "/ValorantTracker/static/js/787.36020927.chunk.js",
+    "main.css": "/ValorantTracker/static/css/main.381f4d60.css",
+    "main.js": "/ValorantTracker/static/js/main.fdee8935.js",
+    "static/js/27.5780d784.chunk.js": "/ValorantTracker/static/js/27.5780d784.chunk.js",
+    "static/media/weapon.webm": "/ValorantTracker/static/media/weapon.35ae238ed7bc819eb9cf.webm",
     "static/media/FFA_Deathmatch_Poster.png": "/ValorantTracker/static/media/FFA_Deathmatch_Poster.0b43b853fa4a03beb640.png",
+    "static/media/char.webm": "/ValorantTracker/static/media/char.259da24bad09ea2b436b.webm",
     "static/media/raze-gun.png": "/ValorantTracker/static/media/raze-gun.3f64196e6e1ce5609a7e.png",
     "static/media/raze-reyna.png": "/ValorantTracker/static/media/raze-reyna.e897a18244845d4b7f76.png",
     "static/media/overlay.png": "/ValorantTracker/static/media/overlay.43e5f498785af50bd221.png",
     "static/media/agents-background-jpg": "/ValorantTracker/static/media/agents-background-eb7bdcf6098abe206e45225d09519000.cf4068f9ec027c283cad.jpg",
-    "index.html": "/ValorantTracker/index.html",
-    "main.378833d2.css.map": "/ValorantTracker/static/css/main.378833d2.css.map",
-    "main.9f217752.js.map": "/ValorantTracker/static/js/main.9f217752.js.map",
-    "787.36020927.chunk.js.map": "/ValorantTracker/static/js/787.36020927.chunk.js.map"
+    "index.html": "/ValorantTracker/index.html"
   },
   "entrypoints": [
-    "static/css/main.378833d2.css",
-    "static/js/main.9f217752.js"
+    "static/css/main.381f4d60.css",
+    "static/js/main.fdee8935.js"
   ]
 }
