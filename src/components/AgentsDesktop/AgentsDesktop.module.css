@@ -4,6 +4,10 @@
   top: 0;
   left: 0;
   animation: topImage 1.5s forwards ease-in-out;
+  transition: 1.2s ease;
+}
+.bannerImageTop:hover {
+  transform: scale(1.1);
 }
 .text:hover {
   margin-left: 20px;

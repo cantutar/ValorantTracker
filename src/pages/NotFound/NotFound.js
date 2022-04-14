@@ -8,23 +8,27 @@ import classes from "./NotFound.module.css";
 export default function NotFound(props) {
   return (
     <>
-      <Wrapper>
+      <div className={classes.h100}>
         <div className="container">
           <div className="row">
-            <div className="col-md-3 text-white d-flex align-self-center">
-              <h1 className="display-4">404 Page Not found. :(</h1>
+            <div className="col-lg-6 col-md-12 col-sm-12 text-white d-flex align-self-center order-last order-lg-first">
+              <div className="row">
+                <div className="col-12">
+                  <h1 className="display-1">404 Page Not found.</h1>
+                </div>
+                <div className="col d-flex align-items-end">
+                  <Button variant="danger" className="mx-auto" as={Link} to="/">
+                    Go back to Home Agent?
+                  </Button>
+                </div>
+              </div>
             </div>
-            <div className="col-md-3 d-flex align-self-center">
-              <Button variant="danger" className="mx-auto" as={Link} to="/">
-                Go back to Home Agent?
-              </Button>
-            </div>
-            <div className="col-md-6">
-              <img src={image} alt="" />
+            <div className="col-lg-6 col-md-12 col-sm-3 order-first order-lg-last">
+              <img src={image} alt="" className={classes.image} />
             </div>
           </div>
         </div>
-      </Wrapper>
+      </div>
     </>
   );
 }

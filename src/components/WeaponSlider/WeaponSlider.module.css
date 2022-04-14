@@ -1,0 +1,96 @@
+@import url("http://fonts.cdnfonts.com/css/valorant");
+.WeaponSlide {
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    ". title ."
+    ". image ."
+    "modalButton modalButton modalButton";
+  color: white;
+}
+
+.WeaponSlide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.Slider {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.modalButton {
+  grid-area: modalButton;
+  color: #e9b541;
+}
+
+.title {
+  grid-area: title;
+  font-family: "VALORANT", sans-serif;
+}
+.image {
+  grid-area: image;
+  transition: all 0.2s ease-in-out;
+}
+.image:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .WeaponSlide img {
+    display: block;
+    width: 80vw !important;
+    height: auto !important;
+    object-fit: cover;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .WeaponSlide img {
+    display: block;
+    width: 80vw;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .WeaponSlide img {
+    display: block;
+    width: 90vw;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .WeaponSlide img {
+    display: block;
+    width: 90vw;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .WeaponSlide img {
+    display: block;
+    width: 50vw;
+    height: auto;
+    object-fit: cover;
+  }
+}

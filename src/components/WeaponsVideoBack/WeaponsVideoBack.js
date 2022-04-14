@@ -1,12 +1,12 @@
 import Background from "../../assets/videos/weapon.webm";
-import Slider from "../AgentSlider/AgentSlider";
 import classes from "./WeaponsVideoBack.module.css";
+import WeaponSlider from "../WeaponSlider/WeaponSlider";
 
 export default function WeaponsVideoBack(props) {
   return (
     <>
       <div>
-        <Slider />
+        <WeaponSlider />
         <video
           src={Background}
           loop

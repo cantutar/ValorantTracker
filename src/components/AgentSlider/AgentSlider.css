@@ -128,6 +128,7 @@
   .card {
     margin-left: 5em;
   }
-}
-.swiper-button-next {
+  .title {
+    margin-bottom: 1.4rem;
+  }
 }
