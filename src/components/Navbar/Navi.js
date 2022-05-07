@@ -8,10 +8,10 @@ export default function Navi(props) {
     <>
       <Navbar
         fixed="top"
-        bg="dark"
+        bg="valorantdarkblue"
         variant="dark"
         expand="lg"
-        className={classes.Navbar}
+        className={`${classes.Navbar}`}
       >
         <Container>
           <Navbar.Brand>
@@ -43,13 +43,20 @@ export default function Navi(props) {
                 player(test only)
               </Nav.Link>
               <Nav.Link className={classes.Maps} as={NavLink} to="/weapons">
-                weapons(test only)
+                Weapons
+              </Nav.Link>
+              <Nav.Link
+                className={classes.Maps}
+                as={NavLink}
+                to="/weaponsmodal"
+              >
+                WeaponsModal(test only)
               </Nav.Link>
               <Nav.Link className={classes.Maps} as={NavLink} to="/404">
                 404(test only)
               </Nav.Link>
-              <Nav.Link className={classes.Maps} as={NavLink} to="/video">
-                PlayerVideo(test only)
+              <Nav.Link className={classes.Maps} as={NavLink} to="/modal">
+                AgentsModal(test only)
               </Nav.Link>
             </Nav>
             <Nav>

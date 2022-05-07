@@ -1,0 +1,10 @@
+/* body {
+  background-image: url(https://playvalorant.com/assets/images/background-sprite.png);
+  object-fit: cover;
+  background-repeat: repeat-y;
+} */
+
+@font-face {
+  font-family: Valorant;
+  src: url("../fonts/Valorant_Font.ttf") format("truetype");
+}

@@ -177,7 +177,7 @@
       rgba(235, 77, 81, 1) 60%,
       rgba(255, 71, 85, 1) 100%
     ); */
-    background: url(../../assets/images/agents-background-eb7bdcf6098abe206e45225d09519000.jpg);
+    background: url(../../assets/images/agents-background.jpg);
     background-size: cover;
     width: 100%;
     height: calc(100vh);

@@ -1,0 +1,39 @@
+$valorantred: #ff4755;
+$valorantdarkred: #e84057;
+$valorantblue: #28344e;
+$valorantprimary: #101c26;
+$valorantdarkblue: #0f1922;
+$valorantcream: #ece8e1;
+$goldray: #e9b541;
+$body-bg: $valorantcream;
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+
+$custom-colors: (
+  "valorantred": $valorantred,
+  "valorantdarkred": $valorantdarkred,
+  "valorantblue": $valorantblue,
+  "valorantprimary": $valorantprimary,
+  "valorantdarkblue": $valorantdarkblue,
+  "valorantcream": $valorantcream,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+$utilities-colors: map-merge(
+  $theme-colors-rgb,
+  (
+    "black": to-rgb($black),
+    "white": to-rgb($white),
+    "body": to-rgb($body-color),
+  )
+);
+
+$utilities-text-colors: map-loop(
+  $utilities-colors,
+  rgba-css-var,
+  "$key",
+  "text"
+);
+$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";

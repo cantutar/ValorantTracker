@@ -12,12 +12,12 @@
   position: absolute;
   z-index: 2;
   /* padding-top: 430px; */
-  padding-top: calc(41vh);
+  /* padding-top: calc(41vh); */
 }
 .title {
   position: absolute;
   z-index: 2;
-  padding-top: calc(44.5vh);
+  /* padding-top: calc(44.5vh); */
 }
 /* `sm` applies to x-small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
@@ -57,5 +57,14 @@
 }
 
 /* `xxl` applies to x-large devices (large desktops, less than 1400px) */
-@media (max-width: 1399.98px) {
+@media (min-width: 1200px) {
+  .playerCard {
+    width: 268px;
+  }
+  .title {
+    margin-top: 432px;
+  }
+  .nick {
+    margin-top: 390px;
+  }
 }

@@ -11,15 +11,24 @@ import "swiper/css/scrollbar";
 import "./AgentSlider.css";
 import classes from "./AgentSlider.module.css";
 import { useAgentsInfo } from "../../store/agent-context";
+import { useEffect } from "react";
 
 export default function Slider(props) {
   const { agents } = useAgentsInfo();
+  useEffect(() => {
+    const swiperPagination = document.querySelector(".swiper-pagination");
+    swiperPagination.className += ` ${classes.AgentBar}`;
+  }, []);
+  function AgentsPagination(index, className) {
+    if (agents.length === 0) return null;
+    return agents[index].isPlayableCharacter
+      ? `<span class=${className}><img src="${agents[index].displayIconSmall}" alt=${agents[index].displayName}></span>`
+      : "";
+  }
 
   const pagination = {
     clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
-    },
+    renderBullet: AgentsPagination,
   };
   const navigation = {
     navigation: {
@@ -41,28 +50,35 @@ export default function Slider(props) {
       {agents.map((agent) => {
         return (
           agent.isPlayableCharacter && (
-            <SwiperSlide key={agent.displayName}>
-              <div className="cont">
-                <h1 className="display-1 title">{agent.displayName}</h1>
-                <img src={agent.fullPortraitV2} alt="" className="image" />
-                {/* <div
+            <SwiperSlide key={agent.displayName} className={classes.AgentSlide}>
+              <h1 className={`${classes.title}`}>{agent.displayName}</h1>
+              <img
+                src={agent.bustPortrait}
+                alt={agent.displayName}
+                className={`d-none d-md-block d-lg-block d-xxl-block ${classes.image}`}
+              />
+              <img
+                src={agent.fullPortrait}
+                alt={agent.displayName}
+                className={`d-sm-none ${classes.image}`}
+              />
+              {/* <div
                   className="card bg-transparent border-0"
                   // style={{ maxWidth: "18rem" }}
-                >
+                  >
                   <h5 className="card-header d-flex justify-content-evenly align-items-center">
                     {agent.role.displayName}{" "}
                     <img
                       src={agent.role.displayIcon}
                       alt={agent.role.displayName}
                       style={{ width: "1em" }}
-                    />
-                  </h5>
-                  <div className="card-body">
-                    <p className="card-text">{agent.description}</p>
-                  </div>
-                </div> */}
-                {/* TODO ADD A MODAL ON OPENABLE WITH CHAR */}
-              </div>
+                      />
+                      </h5>
+                      <div className="card-body">
+                      <p className="card-text">{agent.description}</p>
+                      </div>
+                    </div> */}
+              {/* TODO ADD A MODAL ON OPENABLE WITH CHAR */}
             </SwiperSlide>
           )
         );

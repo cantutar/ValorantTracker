@@ -11,17 +11,23 @@ import "swiper/css/scrollbar";
 import "./WeaponSlider.css";
 import classes from "./WeaponSlider.module.css";
 import { useWeaponCtx } from "../../store/weapon-context";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import WeaponModal from "../WeaponModal/WeaponModal";
 
 export default function Slider(props) {
-  const { weapons, weaponsImage, weaponsName } = useWeaponCtx();
+  useEffect(() => {
+    const swiperPagination = document.querySelector(".swiper-pagination");
+    swiperPagination.className += ` ${classes.WeaponBar}`;
+    const swiperPaginationBullet = document.querySelector(".swiper-pagination");
+    swiperPaginationBullet.className += ` ${classes.WeaponBox}`;
+  }, []);
+  const { weapons } = useWeaponCtx();
   const [show, setShow] = useState(false);
-  console.log(weaponsImage, weaponsName);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const indexImage = (index, className) => {
-    return `<span class=${className}><img src="${weaponsImage[index]}" alt=${weaponsName[index]}></span>`;
+    if (weapons.length === 0) return null;
+    return `<span class=${className}><img src="${weapons[index].killStreamIcon}" loading="lazy" alt=${weapons[index].displayName}></span>`;
   };
 
   const pagination = {
@@ -37,39 +43,42 @@ export default function Slider(props) {
   };
   return (
     <>
-      <Swiper
-        cssMode
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={50}
-        navigation={navigation}
-        pagination={pagination}
-        scrollbar={{ draggable: true }}
-        slidesPerView={1}
-        className={`${classes.Slider}`}
-      >
-        {weapons.map((weapon) => {
-          return (
-            <SwiperSlide
-              key={weapon.displayName}
-              className={classes.WeaponSlide}
-            >
-              <h1 className={`display-1 ${classes.title}`}>
-                {weapon.displayName}
-              </h1>
-              <img
-                src={weapon.displayIcon}
-                alt={weapon.displayName}
-                className={classes.image}
-                onClick={handleShow}
-              />
-              {/* <h6 className={`${classes.modalButton}`}>
+      {
+        <Swiper
+          cssMode
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          navigation={navigation}
+          pagination={pagination}
+          scrollbar={{ draggable: true }}
+          slidesPerView={1}
+          className={`${classes.Slider}`}
+        >
+          {weapons.map((weapon) => {
+            return (
+              <SwiperSlide
+                key={weapon.displayName}
+                className={classes.WeaponSlide}
+              >
+                <h1 className={`display-1 ${classes.title}`}>
+                  {weapon.displayName}
+                </h1>
+                <img
+                  src={weapon.displayIcon}
+                  alt={weapon.displayName}
+                  className={classes.image}
+                  onClick={handleShow}
+                  loading="lazy"
+                />
+                {/* <h6 className={`${classes.modalButton}`}>
                 {`For showing details of ${weapon.displayName} click the ${weapon.displayName} image!`}
               </h6> */}
-              <WeaponModal handleClose={handleClose} show={show} />
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+                <WeaponModal handleClose={handleClose} show={show} />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      }
     </>
   );
 }

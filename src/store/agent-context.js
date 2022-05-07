@@ -10,10 +10,13 @@ export function useAgentsInfo() {
 }
 export default function AgentContextProvider(props) {
   useEffect(() => {
-    axios
-      .get(AgentsUrl)
-      .then((res) => setAgents(res.data.data))
-      .catch((err) => alert(err));
+    async function fetchAgents() {
+      await axios
+        .get(AgentsUrl)
+        .then((res) => setAgents(res.data.data))
+        .catch((err) => alert(err));
+    }
+    fetchAgents();
   }, []);
 
   const [agents, setAgents] = useState([]);
