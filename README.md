@@ -1,8 +1,23 @@
-# Getting Started with Create React App
+# ValorantTracker App
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
+  <a href="https://github.com/cantutar/starbucks-clone-with-improvements" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="https://github.com/cantutar/starbucks-clone-with-improvements/graphs/commit-activity" target="_blank">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-no-red.svg" />
+  </a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1>
+ <span style="color: red">Warning!</span> due to reason of project turned to a commercial app, i don't push the codes anymore.
+</h1>
 
-## Available Scripts
+Here is the view of the ongoing 👉 [project](https://codename-tracker.vercel.app/)
+
+>original look of [site](https://github.com/cantutar/ValorantTracker/deployments/activity_log?environment=github-pages= (click on the latest)
+
+## How to use it?
 
 In the project directory, you can run:
 
