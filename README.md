@@ -15,7 +15,7 @@
 
 Here is the view of the ongoing 👉 [project](https://codename-tracker.vercel.app/)
 
->original look of [site](https://github.com/cantutar/ValorantTracker/deployments/activity_log?environment=github-pages= (click on the latest)
+>original look of [site](https://cantutar.github.io/ValorantTracker/)
 
 ## How to use it?
 
